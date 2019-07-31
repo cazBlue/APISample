@@ -19,3 +19,5 @@ Shrub.prototype.getPlantInfo = function () {
 const shrub = new Shrub('Bill', 'Oak', 100, 'france', 'mood', 'Freestyle');
 console.log(shrub.getPlantInfo());
 */
+
+module.exports = Shrub;

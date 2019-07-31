@@ -4,7 +4,7 @@ const plantService = require('../service/plant.service');
 
 // define the home page route
 router.get('/', function (req, res) {
-    res.json(plantService.getShrubs());
+    res.json(plantService.getPlants());
 });
 
 module.exports = router;

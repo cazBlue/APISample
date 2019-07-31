@@ -1,15 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
+const plantService = require('../service/plant.service');
 
 // define the home page route
 router.get('/', function (req, res) {
-    res.send('Herb home page')
-});
-
-// define the about route
-router.get('/about', function (req, res) {
-    res.send('About Herbs')
+    res.json(plantService.getHerbs());
 });
 
 module.exports = router;

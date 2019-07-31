@@ -6,6 +6,7 @@ const moment = require('moment-timezone');
 const shrubRoutes = require('./controller/shrub.controller');
 const herbRoutes = require('./controller/herb.controller');
 const treeRoutes = require('./controller/tree.controller');
+const plantRoutes = require('./controller/plant.controller');
 
 
 //middleware
@@ -17,5 +18,6 @@ router.use(function timeLog (req, res, next) {
 router.use('/api/shrub', shrubRoutes);
 router.use('/api/herb', herbRoutes);
 router.use('/api/tree', treeRoutes);
+router.use('/api/plant', plantRoutes);
 
 module.exports = router;

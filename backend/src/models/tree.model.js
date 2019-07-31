@@ -20,3 +20,5 @@ Tree.prototype.getPlantInfo = function () {
 const tree = new Tree('Bill', 'Oak', 100, 'france', 'mood', 'Slow Jive');
 console.log(tree.getPlantInfo());
 */
+
+module.exports = Tree;
