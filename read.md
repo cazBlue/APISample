@@ -6,6 +6,9 @@
 * Swagger
 * Database - SQLite3? maybe redis/mongo
 
+Environment variables can be set in backend/.env
+* APP_PORT - backend API port
+
 ###Frontend - written in TS
 * Angular
 
