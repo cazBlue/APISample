@@ -6,9 +6,9 @@ const plantProvider = require('../providers/plant.provider');
 /**
  * Returns all plants from database
  */
-exports.getPlants = function()
+exports.getPlants = async function()
 {
-    return plantProvider.getPlants();
+    return await plantProvider.getPlants();
 };
 
 exports.getTrees = function()

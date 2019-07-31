@@ -15,6 +15,5 @@ app.get('/hello', (req, res) => res.send('Hello World!'));
 //**
 app.use('/', appRoutes);
 
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Backend listening on port ${port}!`));
 

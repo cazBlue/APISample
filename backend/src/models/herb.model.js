@@ -16,8 +16,9 @@ Herb.prototype.getPlantInfo = function () {
 };
 
 
-
+/*
 const herb = new Herb('Bill', 'Oak', 100, 'france', 'mood', 'Sun burn relief');
 console.log(herb.getPlantInfo());
+*/
 
 module.exports = Herb;

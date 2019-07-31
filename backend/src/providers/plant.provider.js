@@ -1,27 +1,42 @@
+const util = require('util');
+
+//Database
+const initDB = require('./buildDatabase');
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('./plants.db', (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Connected to the SQlite database.');
+});
+
+initDB.buildDatabase(db);
+
+
+
+
+//Models
 const Herb = require('../models/herb.model');
 const Tree = require('../models/tree.model');
 const Shrub = require('../models/shrub.model');
 
-const herbs = [
-    new Herb('Herby', 'Aloe Vera', 3, 'St Kilda', 'Happy', 'Sub Burn Remedy'),
-    new Herb('Frolt', 'Sage', 4, 'Perth', 'Parched', 'Tasty Tea')
-];
-
-const trees = [
-    new Tree('blinky', 'Eucalyptus', 30, 'Wine Glass Bay', 'relaxed', 'Slow Waltz'),
-    new Tree('Groak', 'Oak', 54, 'Cygnet', 'chilly', 'Fat Rumba')
-];
-
-const shrubs = [
-    new Shrub('Neee', 'Lavender', 1, 'Botanical Gardens', 'pampered', 'Cha Cha')
-];
-
 /**
  * Returns all plants from database
  */
-exports.getPlants = function()
+exports.getPlants = async function()
 {
-    return {'herbs': herbs, 'trees': trees, 'shrubs': shrubs}
+    const sql = 'select name, species, age, location, mood, trait from plants;';
+    return new Promise( ( (resolve, reject) =>
+    {
+        db.all(sql, [], (err, rows) => {
+            if(err)
+                reject(err);
+
+            //console.log(rows);
+            resolve(rows);
+        })
+    }));
+
 };
 
 exports.getTrees = function()

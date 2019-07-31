@@ -158,3 +158,4 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+plants.db
