@@ -16,6 +16,7 @@ Environment variables can be set in backend/.env
 To run backend
 
     cd into backend end dir and run
+    npm install
     node src/main.ts
 
 Available endpoints
