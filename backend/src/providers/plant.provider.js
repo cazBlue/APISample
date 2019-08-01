@@ -98,3 +98,16 @@ exports.addPlant = function (plant) {
     }));
 
 };
+
+exports.deletePlant = function (id) {
+    return new Promise( ( (resolve, reject) => {
+        db.run(`DELETE from plants where id=?`,
+            [id], function (err) {
+                if (err) {
+                    reject(err.message);
+                }
+
+                resolve({"msg": "Plant deleted"});
+            });
+    }));
+};

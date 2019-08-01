@@ -35,3 +35,7 @@ exports.addPlant = async function(plant)
     return plantProvider.addPlant(plant)
 };
 
+exports.deletePlant = async (id) =>
+{
+    return await plantProvider.deletePlant(id);
+};
