@@ -1,3 +1,7 @@
+Simple Node Express API
+Allows add/delete/query of 3 plant types.
+
+Plant types leverage prototypes, this is building on the example lesson.
 
 #Technology stack:
 ###Backend - written in JS
