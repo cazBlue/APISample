@@ -18,13 +18,18 @@ Available endpoints
 
 ####GET
 *localhost:3000/api/plant
+
 *localhost:3000/api/shrub
+
 *localhost:3000/api/tree
+
 *localhost:3000/api/herb
 
 ###POST
 *localhost:3000/api/shrub
+
 *localhost:3000/api/tree
+
 *localhost:3000/api/herb
 
     {
