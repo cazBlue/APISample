@@ -11,18 +11,27 @@ exports.getPlants = async function()
     return await plantProvider.getPlants();
 };
 
-exports.getTrees = function()
+exports.getTrees = async () =>
 {
-    return plantProvider.getTrees();
+    return await plantProvider.getTrees();
 };
 
-exports.getHerbs = function()
+exports.getHerbs = async () =>
 {
-    return plantProvider.getHerbs();
+    return await plantProvider.getHerbs();
 };
 
-exports.getShrubs = function()
+exports.getShrubs = async () =>
 {
-    return plantProvider.getShrubs();
+    return await plantProvider.getShrubs();
+};
+
+/**
+ *
+ * @param plant
+ */
+exports.addPlant = async function(plant)
+{
+    return plantProvider.addPlant(plant)
 };
 

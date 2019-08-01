@@ -1,5 +1,6 @@
 /**
  * @description Base Plant object, extended into plant types
+ * * @param id
  * @param name
  * @param species
  * @param age
@@ -7,8 +8,9 @@
  * @param mood
  * @constructor
  */
-function Plant (name, species, age, location, mood)
+function Plant (id, name, species, age, location, mood)
 {
+    this.id         = id;
     this.name       = name;
     this.species    = species;
     this.age        = age;

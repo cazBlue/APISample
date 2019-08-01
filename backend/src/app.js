@@ -9,6 +9,9 @@ const port = process.env.APP_PORT || 3000;
 //** Routes
 const appRoutes = require('./app.routes');
 
+//** parses
+app.use(express.json());
+
 //** Hello world test route
 app.get('/hello', (req, res) => res.send('Hello World!'));
 

@@ -1,9 +1,9 @@
 const Plant = require('./plant.model');
 
 //declare a Shrub object that will inherit from the base Plant prototype
-function Shrub (name, species, age, location, mood, swimStyle)
+function Shrub (id, name, species, age, location, mood, swimStyle)
 {
-    Plant.call(this, name, species, age, location, mood);
+    Plant.call(this, id,  name, species, age, location, mood);
     this.swimStyle = swimStyle;
 }
 
