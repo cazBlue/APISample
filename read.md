@@ -3,11 +3,43 @@
 ###Backend - written in JS
 * Node JS
 * Express JS
-* Swagger
-* Database - SQLite3? maybe redis/mongo
+* Swagger - not implemented
+* Database - SQLite3
 
 Environment variables can be set in backend/.env
 * APP_PORT - backend API port
+
+To run backend
+
+    cd into backend end dir and run
+    node src/main.ts
+
+Available endpoints
+
+####GET
+*localhost:3000/api/plant
+*localhost:3000/api/shrub
+*localhost:3000/api/tree
+*localhost:3000/api/herb
+
+###POST
+*localhost:3000/api/shrub
+*localhost:3000/api/tree
+*localhost:3000/api/herb
+
+    {
+      "id": int, 
+      "name": string, 
+      "species": string, 
+      "age": int, 
+      "location": string, 
+      "mood": string, 
+      "remedy" : string <- IF Herb
+      "swimStyle" : string <- IF Shrub
+      "danceStyle": string <- IF Dance
+    }   
+
+#Below not implemented
 
 ###Frontend - written in TS
 * Angular
@@ -26,6 +58,4 @@ Front end - cd into front end dir and run
     
     npm run start 
 
-Backend - cd into front end dir and run
 
-    node main.ts
