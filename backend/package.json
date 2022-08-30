@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "dotenv": "^8.0.0",
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "sqlite3": "^4.0.9",
     "swagger-ui-express": "^4.0.7"
   },
