@@ -8,7 +8,7 @@
     "start:dev": "node src/app.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "dotenv": "^8.0.0",
     "moment-timezone": "^0.5.26",
     "sqlite3": "^4.0.9",
